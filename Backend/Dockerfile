@@ -18,4 +18,6 @@ COPY . .
 EXPOSE 8080
 
 # Use Gunicorn as the production server
-CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8080", "app:app"]
+# Use Gunicorn as the production server
+# Binds to 0.0.0.0 and port 8080 directly
+CMD gunicorn --workers 3 --bind 0.0.0.0:${PORT:-8080} app:app
