@@ -33,7 +33,7 @@ export function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://sentiment-analysis-backend-nu.vercel.app/api/history")
+    fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/history")
       .then((res) => res.json())
       .then((data) => {
         setAnalyses(data);

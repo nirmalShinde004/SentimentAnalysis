@@ -47,7 +47,7 @@ export function AnalysisResults() {
 
   useEffect(() => {
     if (!data) {
-      fetch("https://sentiment-analysis-backend-nu.vercel.app/api/history")
+      fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/history")
         .then((res) => res.json())
         .then((results) => {
           const found = results.find(

@@ -21,7 +21,7 @@ export function AnalyzeProduct() {
   const submitRequest = async () => {
     if (!productName) return alert("Enter product name");
 
-    const res = await fetch("https://sentiment-analysis-backend-nu.vercel.app/api/request-analysis", {
+    const res = await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/request-analysis", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export function AnalyzeProduct() {
 
   const fetchUserResults = async () => {
     const res = await fetch(
-      `https://sentiment-analysis-backend-nu.vercel.app/api/user/results/${user.email}`
+      `https://sentimentanalysis-production-3c94.up.railway.app/api/user/results/${user.email}`
     );
 
     const data = await res.json();

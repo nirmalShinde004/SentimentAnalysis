@@ -28,7 +28,7 @@ export function Register() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://sentiment-analysis-backend-nu.vercel.app/api/register", {
+      const res = await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

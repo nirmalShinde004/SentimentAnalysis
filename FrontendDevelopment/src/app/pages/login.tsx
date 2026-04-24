@@ -20,7 +20,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setLoading(true);
 
   try {
-    const res = await fetch("https://sentiment-analysis-backend-nu.vercel.app/api/login", {
+    const res = await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

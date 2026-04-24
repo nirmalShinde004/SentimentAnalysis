@@ -12,7 +12,7 @@ export function UserRequest() {
       return;
     }
 
-    await fetch("https://sentiment-analysis-backend-nu.vercel.app/api/request-analysis", {
+    await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/request-analysis", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
