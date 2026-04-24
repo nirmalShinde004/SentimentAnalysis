@@ -1,6 +1,10 @@
 import sqlite3
+import os
+# Get the directory where this script resides
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DB_PATH = r"C:\Users\raned\Downloads\ProjectM\Backend\analysis.db"
+# Point to analysis.db in that same directory
+DB_PATH = os.path.join(SCRIPT_DIR, "analysis.db")
 
 def clear_analysis_history():
     conn = sqlite3.connect(DB_PATH)
