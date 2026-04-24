@@ -199,7 +199,8 @@ def register():
 
     if success:
         return jsonify({"message": "User registered"})
-    return jsonify({"error": "Email exists"}), 400
+    else:
+        return jsonify({"error": "Email exists"}), 400
 
 
 # ----------------------------
@@ -285,6 +286,11 @@ def admin_analyze(req_id):
 # ----------------------------
 # USER RESULTS
 # ----------------------------
+@app.route("/api/", methods=["GET"])
+def home():
+    return jsonify({"message": "Sentiment Analysis API is running!"})
+
+
 @app.route("/api/user/results/<email>", methods=["GET"])
 def user_results(email):
     rows = get_user_requests(email)

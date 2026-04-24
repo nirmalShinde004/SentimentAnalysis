@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/Backend/app.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/Backend/app.py"
+    }
+  ]
+}
