@@ -19,6 +19,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setLoading(true);
 
+  // Link changed
   try {
     const res = await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/login", {
       method: "POST",

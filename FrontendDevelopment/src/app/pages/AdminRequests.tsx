@@ -42,6 +42,7 @@ export default function AdminRequests() {
 
       // Refresh list
       // 🔥 REFRESH FULL DATA FROM BACKEND
+      // Link changed
 const updated = await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/admin/requests");
 const newData = await updated.json();
 setRequests(newData);

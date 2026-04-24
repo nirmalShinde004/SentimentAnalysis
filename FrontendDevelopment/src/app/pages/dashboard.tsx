@@ -32,6 +32,7 @@ export function Dashboard() {
   const [analyses, setAnalyses] = useState<Analysis[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // Link changed
   useEffect(() => {
     fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/history")
       .then((res) => res.json())

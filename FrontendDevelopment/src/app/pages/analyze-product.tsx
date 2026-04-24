@@ -21,6 +21,7 @@ export function AnalyzeProduct() {
   const submitRequest = async () => {
     if (!productName) return alert("Enter product name");
 
+    // Link changed
     const res = await fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/request-analysis", {
       method: "POST",
       headers: {

@@ -32,6 +32,7 @@ export function ProductHistory() {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
+  // Link changed
   useEffect(() => {
     fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/history")
       .then((res) => res.json())

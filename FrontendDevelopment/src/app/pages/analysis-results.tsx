@@ -45,6 +45,7 @@ export function AnalysisResults() {
 
   const [loading, setLoading] = useState(!data);
 
+  // Link changed
   useEffect(() => {
     if (!data) {
       fetch("https://sentimentanalysis-production-3c94.up.railway.app/api/history")
