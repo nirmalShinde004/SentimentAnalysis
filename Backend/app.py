@@ -8,28 +8,6 @@ from bs4 import BeautifulSoup
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-import nltk
-import os
-
-# 1. Define a writable directory for NLTK data
-# Using /tmp is required for serverless environments like Vercel/AWS Lambda
-nltk_data_dir = '/tmp/nltk_data'
-
-# 2. Add this path to NLTK's search path
-if nltk_data_dir not in nltk.data.path:
-    nltk.data.path.append(nltk_data_dir)
-
-# 3. Download the data specifically to the writable directory
-if not os.path.exists(nltk_data_dir):
-    os.makedirs(nltk_data_dir, exist_ok=True)
-
-nltk.download('stopwords', download_dir=nltk_data_dir)
-nltk.download('vader_lexicon', download_dir=nltk_data_dir)
-
-from nltk.corpus import stopwords
-STOP_WORDS = set(stopwords.words("english"))
-
-
 from database import (
     init_db,
     register_user,
