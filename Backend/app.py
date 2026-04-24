@@ -26,7 +26,6 @@ if not os.path.exists(nltk_data_dir):
 nltk.download('stopwords', download_dir=nltk_data_dir)
 nltk.download('vader_lexicon', download_dir=nltk_data_dir)
 
-# Now you can safely load your resources
 from nltk.corpus import stopwords
 STOP_WORDS = set(stopwords.words("english"))
 
